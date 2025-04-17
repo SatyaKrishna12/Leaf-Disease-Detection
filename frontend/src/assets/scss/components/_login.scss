@@ -1,0 +1,66 @@
+.login {
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh; // Full screen height
+  padding: 2rem;
+  background-color: #f9f9f9;
+}
+
+.login__box {
+  width: 100%;
+  max-width: 400px;
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+  
+  .login__form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+  }
+  
+  .login__input-group label {
+    font-weight: 600;
+    margin-bottom: 0.3rem;
+    display: block;
+  }
+  
+  .login__input-group input {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 0.75rem;
+    outline: none;
+  }
+  
+  .login__btn {
+    margin-top: 1rem;
+  }
+  
+  .login__register-text {
+    margin-top: 1rem;
+    text-align: center;
+    font-size: 0.95rem;
+  }
+  
+  .login__register-link {
+    color: #2e7d32;
+    font-weight: 600;
+    cursor: pointer;
+    text-decoration: underline;
+  }
+  .feedback {
+    display: flex;
+    justify-content: center;   // Horizontally center
+    align-items: center;       // Vertically center (optional, if you want full height centering)
+    padding: 4rem 1rem;
+    min-height: 100vh;         // For full-page vertical centering if desired
+    background-color: #f9f9f9; // Optional: subtle background
+    width: 100vw;           
+  }
+  

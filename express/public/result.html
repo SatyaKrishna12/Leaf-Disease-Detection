@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Prediction Result</title>
+</head>
+<body>
+    <h2>Prediction Result:</h2>
+    
+    <p><strong>Class:</strong> <span id="result-class">Loading...</span></p>
+    <p><strong>Confidence:</strong> <span id="result-confidence">Loading...</span></p>
+
+    <a href="/">Back</a>
+
+    <script>
+        // This script runs after image upload form posts and receives the result
+        fetch("http://localhost:5000/predict", {
+            method: "POST",
+            body: localStorage.getItem("formData") // You need to store this from the upload
+        })
+        .then(response => response.json())
+        .then(data => {
+            document.getElementById("result-class").innerText = data.predicted_class || "undefined";
+            document.getElementById("result-confidence").innerText = 
+                data.confidence_score !== undefined ? data.confidence_score.toFixed(2) + "%" : "NaN%";
+        })
+        .catch(error => {
+            console.error("Prediction Error:", error);
+            document.getElementById("result-class").innerText = "Error";
+            document.getElementById("result-confidence").innerText = "Error";
+        });
+    </script>
+</body>
+</html>
