@@ -23,10 +23,27 @@ An intelligent web-based system that detects plant leaf diseases from images usi
 | Frontend   | Express.js / React (with SCSS) |
 | Backend    | Flask (Python)      |
 | Model      | CNN Model (Keras/TensorFlow) |
-| Database   | SQLite              |
+| Database   | MongoDB              |
 | Auth       | JWT Authentication  |
 
 ---
 
-## 📁 Project Structure
+
+---
+
+## 🧪 How to Run the Project
+
+### 🔧 Backend (Flask)
+
+1. **Navigate to the backend folder:**
+   ```bash
+   cd flask_backend
+2. **Install dependencies:**
+
+   ```bash
+    pip install -r requirements.txt
+3. **Run Flask server:**
+    ```bash
+    python app.py
+
 
