@@ -46,4 +46,29 @@ An intelligent web-based system that detects plant leaf diseases from images usi
     ```bash
     python app.py
 
+### 🌐 Frontend (Express.js)
+
+1. **Navigate to the Backend folder:**
+   ```bash
+   cd express
+2. **Install dependencies:**
+
+   ```bash
+    npm install
+3. **Start the backend server:**
+    ```bash
+    npm start
+
+### 🌐 Frontend (React.js)
+
+1. **Navigate to the Frontend folder:**
+   ```bash
+   cd frontend
+2. **Install dependencies:**
+
+   ```bash
+    npm install
+3. **Start the frontend server:**
+    ```bash
+    npm run dev
 
