@@ -29,6 +29,7 @@ An intelligent web-based system that detects plant leaf diseases from images usi
 ---
 
 
+
 ---
 
 ## 🧪 How to Run the Project
@@ -71,4 +72,3 @@ An intelligent web-based system that detects plant leaf diseases from images usi
 3. **Start the frontend server:**
     ```bash
     npm run dev
-
