@@ -34,7 +34,7 @@ An intelligent web-based system that detects plant leaf diseases from images usi
 
 ## 🧪 How to Run the Project
 
-### 🔧 Backend (Flask)
+### 🔧 Python Backend (Flask)
 
 1. **Navigate to the backend folder:**
    ```bash
@@ -47,7 +47,7 @@ An intelligent web-based system that detects plant leaf diseases from images usi
     ```bash
     python app.py
 
-### 🌐 Frontend (Express.js)
+### 🌐 Backend (Express.js)
 
 1. **Navigate to the Backend folder:**
    ```bash
