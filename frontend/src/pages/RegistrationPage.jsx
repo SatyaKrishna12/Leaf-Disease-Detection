@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import '../assets/scss/styles.scss';
 import API from '../utils/api';
+import { toast } from 'react-toastify';
 
 function RegistrationPage() {
   const navigate = useNavigate();
@@ -25,10 +26,10 @@ function RegistrationPage() {
     e.preventDefault();
     try {
       await API.post('/users/register', formData);
-      alert('Registration successful!');
+      toast.success('Registration successful! Please login.');
       navigate('/login');
     } catch (err) {
-      alert('Registration failed!');
+      toast.error('Registration failed! Please try again.');
     }
   };
 

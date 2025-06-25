@@ -3,6 +3,7 @@ import '../assets/scss/styles.scss';
 import API from '../utils/api';
 import { setToken } from '../utils/auth';
 import { useNavigate } from 'react-router-dom';
+import { toast } from 'react-toastify';
 
 function LoginPage() {
   const [email, setEmail] = useState('');
@@ -17,7 +18,7 @@ const handleLogin = async (e) => {
     setToken(res.data.token);
     navigate('/home'); 
   } catch (err) {
-    alert("Login failed");
+    toast.error('Login failed! Please check your credentials.');
   }
 };
 

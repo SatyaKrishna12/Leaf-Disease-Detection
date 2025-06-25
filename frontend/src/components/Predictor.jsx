@@ -3,6 +3,8 @@ import axios from "axios";
 import '../assets/scss/styles.scss';
 import aboutImg from '../assets/img/Untitled design.png';
 import { jwtDecode } from "jwt-decode";
+const baseUrl = import.meta.env.VITE_Base_Url
+
 
 const Predictor = () => {
   const [image, setImage] = useState(null);
@@ -32,7 +34,7 @@ const Predictor = () => {
     formData.append("image", image);
     formData.append("user_id", userId); 
     try {
-      const response = await axios.post("http://localhost:3001/predict", formData, {
+      const response = await axios.post(`${baseUrl}/predict`, formData, {
         headers: {
           "Content-Type": "multipart/form-data",
         },

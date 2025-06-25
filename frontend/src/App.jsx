@@ -10,11 +10,15 @@ import LoginPage from './pages/LoginPage';
 import RegistrationPage from './pages/RegistrationPage';
 import FeedbackForm from './pages/FeedbackForm';
 import ProtectedRoute from "./components/ProtectedRoute";
+import { ToastContainer, toast } from 'react-toastify';
+
+
 
 function App() {
   return (
     <Router>
     {/* <Header /> */}
+    <ToastContainer/>
       <Routes>
         <Route path="/" element={<Navigate to="/login" />} />
         <Route path="/login" element={<LoginPage />} />

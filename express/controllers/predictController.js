@@ -1,7 +1,6 @@
 import axios from "axios";
 import fs from "fs";
 import FormData from "form-data";
-import mongoose from "mongoose";
 import Disease_details from "../models/DiseaseDetection.js";
 import AllPredictions from "../models/allpredictions.js";
 export const handlePrediction = async (req, res) => {

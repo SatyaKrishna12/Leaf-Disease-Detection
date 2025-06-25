@@ -3,6 +3,8 @@ import axios from 'axios';
 import '../assets/scss/styles.scss';
 import Header from '../components/Header';
 import { jwtDecode } from 'jwt-decode';
+const baseUrl = import.meta.env.VITE_Base_Url
+
 
 function FeedbackForm() {
   const [content, setContent] = useState('');
@@ -18,7 +20,7 @@ function FeedbackForm() {
   const user_id = decoded.id;
 
       const response = await axios.post(
-        'http://localhost:3001/feedback', 
+        `${baseUrl}/feedback`, 
         { feedback:content, user_id },
       );
 

@@ -4,7 +4,7 @@ import '../assets/scss/styles.scss';
 import Header from '../components/Header';
 import axios from 'axios';
 import { jwtDecode } from "jwt-decode";
-
+const baseUrl = import.meta.env.VITE_Base_Url
 
 function AllPredictions() {
   const token = localStorage.getItem('token'); // or however you stored it
@@ -15,7 +15,7 @@ const userId = decoded.id;
   useEffect(() => { 
     const fetchPredictions = async () => {
       try{
-        const response = await axios.post("http://localhost:3001/predict/allpredictions", {
+        const response = await axios.post(`${baseUrl}/predict/allpredictions`, {
           user_id: userId,
         });
         if (response.status === 200) {
