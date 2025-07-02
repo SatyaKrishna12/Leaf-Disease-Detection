@@ -3,6 +3,7 @@ import axios from "axios";
 import '../assets/scss/styles.scss';
 import aboutImg from '../assets/img/Untitled design.png';
 import { jwtDecode } from "jwt-decode";
+import { toast } from "react-toastify";
 const baseUrl = import.meta.env.VITE_Base_Url
 
 
@@ -41,6 +42,7 @@ const Predictor = () => {
       });
 
       setResult(response.data);
+      toast.success("Prediction successful!");
     } catch (err) {
       setError(err.response?.data?.message || "Prediction failed.");
       console.error("Error during prediction:", err);

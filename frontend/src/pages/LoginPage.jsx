@@ -16,6 +16,7 @@ const handleLogin = async (e) => {
   try {
     const res = await API.post('/users/login', { email, password });
     setToken(res.data.token);
+    toast.success('Login successful!');
     navigate('/home'); 
   } catch (err) {
     toast.error('Login failed! Please check your credentials.');

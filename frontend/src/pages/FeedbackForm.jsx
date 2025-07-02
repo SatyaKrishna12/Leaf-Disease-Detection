@@ -3,6 +3,7 @@ import axios from 'axios';
 import '../assets/scss/styles.scss';
 import Header from '../components/Header';
 import { jwtDecode } from 'jwt-decode';
+import { toast } from 'react-toastify';
 const baseUrl = import.meta.env.VITE_Base_Url
 
 
@@ -25,6 +26,7 @@ function FeedbackForm() {
       );
 
       setMessage(response.data.message || 'Feedback sent!');
+      toast.success('Feedback submitted successfully!');
       setContent('');
     } catch (error) {
       console.error('Error submitting feedback:', error);
